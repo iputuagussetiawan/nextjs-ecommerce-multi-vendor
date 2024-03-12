@@ -17,8 +17,8 @@ export default function CustomDataTable() {
         
     }
     return (
-        <div className='bg-slate-700 p-8 rounded-lg mt-4'>
-            <h2 className='text-xl font-bold mb-4'>Data Table</h2>
+        <div className='bg-slate-100 dark:bg-slate-700 p-8 rounded-lg shadow-xl mt-4'>
+            <h2 className='text-xl font-bold mb-4 text-slate-800 dark:text-slate-50 mb-4'>Data Table</h2>
             {/* Table */}
             
 

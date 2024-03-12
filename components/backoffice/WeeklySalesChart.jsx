@@ -88,8 +88,8 @@ export default function WeeklySalesChart() {
     // };
     
     return (
-        <div className='bg-slate-700 p-8 rounded-lg'>
-            <h2 className='text-xl font-bold mb-4'>Weekly Sales</h2>
+        <div className='bg-slate-100 dark:bg-slate-700 p-8 rounded-lg shadow-xl'>
+            <h2 className='text-xl font-bold mb-4 text-slate-800 dark:text-slate-50'>Weekly Sales</h2>
             {/* Charts */}
             <div className="p-4">
                 {/* Tab */}
