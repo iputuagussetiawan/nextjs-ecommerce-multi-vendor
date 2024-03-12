@@ -16,7 +16,7 @@ export default function page() {
             {/* Carts */}
             <DashboardCharts/>
             {/* Recents Order Table */}
-            <CustomDataTable/>
+            {/* <CustomDataTable/> */}
         </div>
     )
 }

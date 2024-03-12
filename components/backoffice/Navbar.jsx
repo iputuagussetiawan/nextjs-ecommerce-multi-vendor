@@ -1,3 +1,4 @@
+"use client"
 import { AlignJustify, Bell, LayoutDashboard, LogOut, Menu, Settings, Sun, User, X } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
@@ -13,11 +14,11 @@ import {
 import ThemeSwitcherBtn from '../ThemeSwitcherBtn'
 
 
-export default function Navbar() {
+export default function Navbar({setShowSidebar, showSidebar}) {
     return (
-        <div className='flex items-center justify-between bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-50 h-16 px-8 py-4 fixed top-0 left-60 right-0 shadow-sm'>
+        <div className='fixed top-0 left-0 flex items-center justify-between   sm:left-64 right-0  bg-white text-slate-800 dark:bg-slate-800 dark:text-slate-50 h-20 px-8 py-4 shadow-sm z-50 '>
             {/* icon */}
-            <button className='text-lime-700 dark:text-lime-500'><AlignJustify/></button>
+            <button onClick={()=>setShowSidebar(!showSidebar)} className='text-lime-700 dark:text-lime-500'><AlignJustify/></button>
             {/* 3 icon */}
 
             <div className="flex space-x-3">
