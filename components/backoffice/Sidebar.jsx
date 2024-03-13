@@ -1,5 +1,5 @@
 "use client"
-import { Box, BoxIcon, Boxes, ChevronDown, ChevronRight, Layout, LayoutGrid, LayoutList, ListOrdered, LogOut, Map, MonitorPlay, ScanSearch, SendToBack, Settings, Store, Tractor, User, Users } from 'lucide-react'
+import { Box, BoxIcon, Boxes, Building2, ChevronDown, ChevronRight, CircleDollarSign, Layout, LayoutGrid, LayoutList, ListOrdered, LogOut, Map, MonitorPlay, ScanSearch, SendToBack, Settings, Store, Tractor, User, Users } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -50,6 +50,20 @@ export default function Sidebar({showSidebar, setShowSidebar}) {
             icon:Settings,
             link:"/dashboard/settings"
         },
+
+        {
+            title:"Community",
+            icon: Building2,
+            link:"/dashboard/community"
+        },
+        {
+            title:"Wallet",
+            icon:CircleDollarSign,
+            link:"/dashboard/wallet"
+        },
+
+
+
         {
             title:"Online Store",
             icon:Store,
@@ -85,7 +99,7 @@ export default function Sidebar({showSidebar, setShowSidebar}) {
         }
     ]
     return (
-        <div className={showSidebar?"sm:block fixed mt-20 sm:mt-0 left-0 top-0 bg-white text-slate-700 dark:bg-slate-700 space-y-6 w-64 h-screen dark:text-slate-50 shadow-md":"hidden sm:block fixed mt-20  sm:mt-0 left-0 top-0 bg-white text-slate-700 dark:bg-slate-700 space-y-6 w-64 h-screen dark:text-slate-50 shadow-md"}>
+        <div className={showSidebar?"sm:block fixed mt-20 sm:mt-0 left-0 top-0 bg-white text-slate-700 dark:bg-slate-700 space-y-6 w-64 h-screen dark:text-slate-50 shadow-md overflow-y-auto":"hidden sm:block fixed mt-20  sm:mt-0 left-0 top-0 bg-white text-slate-700 dark:bg-slate-700 space-y-6 w-64 h-screen dark:text-slate-50 shadow-md overflow-y-auto"}>
             <Link className='mb-6 p-3' href="">
                 <Image width={270} height={60} alt='logo' src="/logo.png"/>
             </Link>
@@ -130,7 +144,7 @@ export default function Sidebar({showSidebar, setShowSidebar}) {
                     })
                 }
                 <div className='py-2 px-6'>
-                    <button className='w-full bg-red-500 flex items-center space-x-3 px-6 py-2 rounded-md'>
+                    <button className='w-full bg-red-500 text-white flex items-center space-x-3 px-6 py-2 rounded-md'>
                         <LogOut/>
                         <span>Logout</span>
                     </button>
